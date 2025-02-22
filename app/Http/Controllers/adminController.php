@@ -18,12 +18,16 @@ class adminController extends Controller
             'title.required' => 'Debes de poner el título para el archivo',
             'title.unique' => 'Ya existe un archivo con ese título',
             'document_category_id.required' => 'Debes de ponerle una categoría al documento',
-            'document_category_id.exists' => 'La categoría seleccionada no existe'
+            'document_category_id.exists' => 'La categoría seleccionada no existe',
+            'document.required' => 'Debes de subir un archivo',
+            'document.file' => 'Debe ser un archivo valido',
+            'document.mimes' => 'El archivo debe ser un PDF'
         ];
 
         $rules = [
             'title' => 'required|unique:documents',
-            'document_category_id' => 'required|exists:document_categories,id'
+            'document_category_id' => 'required|exists:document_categories,id',
+            'document' => 'required|file|mimes:pdf'
         ];
 
         $validator = Validator::make(

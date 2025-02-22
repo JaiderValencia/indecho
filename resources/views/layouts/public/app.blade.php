@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>INDECHO | @yield('title')</title>
+    <title>INDECHO - @yield('title')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -50,17 +50,23 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    @vite([
-        'resources/assets/lib/public/wow/wow.min.js',
+    @vite([        
         'resources/assets/lib/public/easing/easing.min.js',
         'resources/assets/lib/public/waypoints/waypoints.min.js',
         'resources/assets/lib/public/counterup/counterup.min.js',
         'resources/assets/lib/public/lightbox/js/lightbox.min.js',
         'resources/assets/lib/public/owlcarousel/owl.carousel.min.js',
     ])
+    <script src="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css
+" rel="stylesheet">
+
 
     <!-- Template Javascript -->
     @vite('resources/assets/js/public/main.js')

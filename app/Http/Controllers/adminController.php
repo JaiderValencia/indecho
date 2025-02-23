@@ -54,7 +54,7 @@ class adminController extends Controller
             $path = 'documents/' . str_replace(' ', '_', $category->name);
             $name = Uuid::uuid4() . '.' . explode('/', $req->file('document')->getMimeType())[1];
 
-            $fileSaved = $req->file('document')->storeAs($path, $name);
+            $fileSaved = $req->file('document');
 
             $fileSaved = 'storage/' . (Storage::disk('public')->putFileAs($path, $req->file('document'), $name));
 
@@ -65,6 +65,23 @@ class adminController extends Controller
             ]);
 
             return response($fileSaved)->setStatusCode(200);
+        } catch (\Throwable $th) {
+            return response('algo pasó')->setStatusCode(500);
+        }
+    }
+
+    public function deleteFile(Request $req, string $id)
+    {
+        try {
+            $documentPath = Document::where('id', $id)->first('path')->path;
+
+            $documentPath = str_replace('storage/', '', $documentPath);
+
+            if (Storage::disk('public')->exists($documentPath)) Storage::disk('public')->delete($documentPath);
+            
+            Document::where('id', '=', $id)->delete();
+
+            return response('eliminado');
         } catch (\Throwable $th) {
             return response('algo pasó')->setStatusCode(500);
         }

@@ -20,6 +20,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
     @vite([
         'resources/assets/lib/public/animate/animate.min.css',
         'resources/assets/lib/public/lightbox/css/lightbox.min.css',
@@ -28,9 +29,6 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     @vite('resources/assets/css/public/bootstrap.min.css')
-
-    <!-- Template Stylesheet -->
-    @vite('resources/assets/css/public/style.css')
 
     <!-- custom css -->
     @yield('css')
@@ -60,16 +58,7 @@
         'resources/assets/lib/public/lightbox/js/lightbox.min.js',
         'resources/assets/lib/public/owlcarousel/owl.carousel.min.js',
     ])
-    <script src="
-https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js
-"></script>
-<link href="
-https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css
-" rel="stylesheet">
-
-
-    <!-- Template Javascript -->
-    @vite('resources/assets/js/public/main.js')
+    <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
 
     <!-- custom scripts -->
     @yield('scripts')

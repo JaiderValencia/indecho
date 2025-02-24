@@ -2,6 +2,11 @@
 
 @section('title', 'Inicio')
 
+@section('css')
+    <!-- Template Stylesheet -->
+    @vite('resources/assets/css/public/style.css')
+@endsection
+
 @section('content')
     <!-- Abvout Start -->
     <div class="container-fluid about py-5">
@@ -784,4 +789,9 @@
         </div>
     </div>
     <!-- Testimonial End -->
+@endsection
+
+@section('scripts')
+    <!-- Template Javascript -->
+    @vite('resources/assets/js/public/main.js')
 @endsection

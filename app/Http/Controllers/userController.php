@@ -13,8 +13,8 @@ class userController extends Controller
     public function getAll(Request $req)
     {
         try {
-            $limit = $req->query('limit');
-            $page = $req->query('page');
+            $limit = $req->query('limit') ?? 10;
+            $page = $req->query('page') ?? 1;
             $offset = $limit * ($page - 1);
 
             $totalInDB = User::count();
@@ -27,12 +27,12 @@ class userController extends Controller
 
 
             return response()->json([
-                $next,
-                $prev,
-                $totalInDB,
-                $page,
-                $limit,
-                "data" => $users
+                'next' => $next,
+                'prev' => $prev,
+                'total' => $totalInDB,
+                'page' => $page,
+                'limit' => $limit,
+                'data' => $users
             ]);
         } catch (\Throwable $th) {
             return response('algo pasó')->setStatusCode(500);

@@ -11,8 +11,8 @@ class roleController extends Controller
 {
     public function getAll(Request $req)
     {
-        $limit = $req->query('limit');
-        $page = $req->query('page');
+        $limit = $req->query('limit') ?? 10;
+        $page = $req->query('page') ?? 1;
         $offset = $limit * ($page - 1);
 
         try {

@@ -1,8 +1,13 @@
 <?php
+use App\Http\Controllers\adminPagesController;
 use App\Http\Controllers\documentController;
 use App\Http\Controllers\roleController;
 use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
+
+Route::prefix('/panel')->group(function () {
+    Route::get('/', [adminPagesController::class, 'homeView'])->name('admin.home');
+});
 
 Route::prefix('/documents')->group(function () {
     Route::get('/{id}', [documentController::class, 'getById'])->name('documents.getById');

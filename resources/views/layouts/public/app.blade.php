@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="icon" href="/img/solologo.png" type="image/x-icon">
     <title>INDECHO - @yield('title')</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -30,6 +31,9 @@
     <!-- Customized Bootstrap Stylesheet -->
     @vite('resources/assets/css/public/bootstrap.min.css')
 
+    <!-- Template Stylesheet -->
+    @vite('resources/assets/css/public/style.css')
+
     <!-- custom css -->
     @yield('css')
 </head>
@@ -45,13 +49,15 @@
 
     @include('partials.public.footer')
 
+    @include('partials.public.copyright')
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-    <!-- JavaScript Libraries -->     
+    <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    @vite([        
+    @vite([
         'resources/assets/lib/public/easing/easing.min.js',
         'resources/assets/lib/public/waypoints/waypoints.min.js',
         'resources/assets/lib/public/counterup/counterup.min.js',
@@ -59,6 +65,9 @@
         'resources/assets/lib/public/owlcarousel/owl.carousel.min.js',
     ])
     <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
+
+    <!-- Template Javascript -->
+    @vite('resources/assets/js/public/main.js')
 
     <!-- custom scripts -->
     @yield('scripts')

@@ -22,7 +22,7 @@
                     <div class="dropdown-menu m-0">
                         <a href="{{ route('public.about') }}#general" class="dropdown-item">Sobre nosotros</a>
                         <a href="{{ route('public.about') }}#Mivi" class="dropdown-item">Misión y Visión</a>
-                        <a href="{{ route('public.about') }}#equipo" class="dropdown-item">Nuestro equipo</a>
+                        <!-- <a href="{{ route('public.team') }}" class="dropdown-item">Nuestro equipo</a> -->
                     </div>
                 </div>
                 <a href="{{ route('public.contact') }}"

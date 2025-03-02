@@ -26,4 +26,14 @@ class publicPagesController extends Controller
     {
         return view('pages.public.contact', ['active' => 'contact']);
     }
+
+    public function teamView()
+    {
+        return view('pages.public.team', ['active' => 'about']);
+    }
+
+    public function teamDetailView(string $id)
+    {
+        return view('pages.public.team-detail', ['active' => 'about']);
+    }
 }

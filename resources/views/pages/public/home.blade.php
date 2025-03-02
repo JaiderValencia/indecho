@@ -125,7 +125,7 @@
     <!-- About End -->
 
     <!-- Services Start -->
-    <div class="container-fluid service pb-5">
+    <!-- <div class="container-fluid service pb-5">
         <div class="container pb-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h4 class="text-primary">Noticias</h4>
@@ -222,6 +222,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Services End -->
 @endsection

@@ -6,6 +6,7 @@ const cssFiles = globSync('resources/assets/**/*.css')
 const jsFiles = globSync('resources/assets/**/*.js')
 
 export default defineConfig({
+    base: '/',
     plugins: [
         laravel({
             input: [
